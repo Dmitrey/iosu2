@@ -43,4 +43,13 @@ public class Staff {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
+    @Override
+    public String toString() {
+        return "Staff{" +
+                "IdStaff=" + IdStaff +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
+    }
 }

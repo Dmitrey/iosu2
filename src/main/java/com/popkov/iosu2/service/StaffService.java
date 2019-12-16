@@ -20,4 +20,8 @@ public class StaffService {
         List<Staff> list = staffRep.findAll();
         return list;
     }
+
+    public void deleteStaffById(int id){
+        staffRep.deleteById(id);
+    }
 }
