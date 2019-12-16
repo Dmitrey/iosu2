@@ -1,19 +1,23 @@
 package com.popkov.iosu2.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Staff {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int IdStaff;
+    @Column
     private String name;
+    @Column
     private String phone;
 
     public Staff() {
+    }
+
+    public Staff(String name, String phone) {
+        this.name = name;
+        this.phone = phone;
     }
 
     public int getIdStaff() {
