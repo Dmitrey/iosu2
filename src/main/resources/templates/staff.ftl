@@ -9,7 +9,7 @@
 </head>
 <body>
 <h3>Person List</h3>
-<a href="addStaff">Add Person</a>
+<a href="/addEmp">Add Person</a>
 <br><br>
 <div>
 
