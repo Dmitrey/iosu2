@@ -5,6 +5,6 @@
     <title>Person List</title>
 </head>
 <body>
-<div>Hello</div>
+<h2>${uname}</h2>
 </body>
 </html>

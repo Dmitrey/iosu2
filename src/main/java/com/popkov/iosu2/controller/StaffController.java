@@ -18,16 +18,21 @@ public class StaffController {
     @Autowired
     StaffService staffService;
 
+    @GetMapping("/index")
+    public String start(@RequestParam(name = "uname") String name, Model model){
+        model.addAttribute("uname",name);
+        return "index";
+    }
+
 //    @RequestMapping(method = RequestMethod.GET, path = "/start")
-//    public ModelAndView start(){
-//        ModelAndView modelAndView = new ModelAndView("start");
-//        modelAndView.setViewName("start");
-//        return modelAndView;
+//    //@GetMapping("/start")
+//    public String start(){
+//        return "index";
 //    }
 
-    @RequestMapping(method = RequestMethod.GET, path = "/start")
+    @RequestMapping(method = RequestMethod.POST, path = "/start")
     //@GetMapping("/start")
-    public String start(){
+    public String start2(){
         return "index";
     }
 
