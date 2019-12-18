@@ -15,15 +15,19 @@
 
     <table border="1">
         <tr>
+            <th>Id</th>
             <th>Name</th>
             <th>Phone</th>
         </tr>
+        <#if list??>
         <#list list as staff>
             <tr>
+                <td>${staff.idStaff}</td>
                 <td>${staff.name}</td>
                 <td>${staff.phone}</td>
             </tr>
         </#list>
+        </#if>
     </table>
 </div>
 </body>
