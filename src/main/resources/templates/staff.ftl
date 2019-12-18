@@ -9,7 +9,10 @@
 </head>
 <body>
 <h3>Person List</h3>
-<a href="/addEmp">Add Person</a>
+<p>
+    <a href="/addEmp">Add Person</a>
+    <a href="/addEmp">Delete Person</a>
+</p>
 <br><br>
 <div>
 
@@ -20,13 +23,13 @@
             <th>Phone</th>
         </tr>
         <#if list??>
-        <#list list as staff>
-            <tr>
-                <td>${staff.idStaff}</td>
-                <td>${staff.name}</td>
-                <td>${staff.phone}</td>
-            </tr>
-        </#list>
+            <#list list as staff>
+                <tr>
+                    <td>${staff.idStaff}</td>
+                    <td>${staff.name}</td>
+                    <td>${staff.phone}</td>
+                </tr>
+            </#list>
         </#if>
     </table>
 </div>

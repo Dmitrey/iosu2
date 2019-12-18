@@ -17,12 +17,6 @@ public class StaffController {
     @Autowired
     StaffService staffService;
 
-//    @GetMapping("/index")
-//    public String start(@RequestParam(name = "uname") String name, Model model){
-//        model.addAttribute("uname",name);
-//        return "index";
-//    }
-
     @GetMapping("/addEmp")
     public String StaffAdd(Model model){
         model.addAttribute("nstaff", new Staff());
@@ -32,7 +26,7 @@ public class StaffController {
     @PostMapping("/addEmp")
     public String StaffAddSubmit(Model model, @ModelAttribute("nstaff") Staff staff){
         staffService.addStaff(staff.getName(),staff.getPhone());
-        return "addstaff";
+        return "redirect:/showAllEmp";
     }
 
     @GetMapping("/showAllEmp")
@@ -41,13 +35,6 @@ public class StaffController {
         model.addAttribute("list",list);
         return "staff";
     }
-
-//    @PostMapping("/showAllEmp")
-//    public String showStaff2(Model model){
-//        List<Staff> list = staffService.findAllStaff();
-//        model.addAttribute("list",list);
-//        return "staff";
-//    }
 
     @GetMapping("/deleteEmp")
     public void deleteStaff(@RequestParam int id){
