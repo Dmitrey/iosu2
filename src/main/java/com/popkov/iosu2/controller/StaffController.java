@@ -20,7 +20,7 @@ public class StaffController {
     @GetMapping("/addEmp")
     public String StaffAdd(Model model){
         model.addAttribute("nstaff", new Staff());
-        return "addstaff";
+        return "staff/addstaff";
     }
 
     @PostMapping("/addEmp")
@@ -33,11 +33,12 @@ public class StaffController {
     public String showStaff(Model model){
         List<Staff> list = staffService.findAllStaff();
         model.addAttribute("list",list);
-        return "staff";
+        return "staff/staff";
     }
 
     @GetMapping("/deleteEmp")
-    public void deleteStaff(@RequestParam int id){
+    public String deleteStaff(@RequestParam int id){
         staffService.deleteStaffById(id);
+        return "redirect:/showAllEmp";
     }
 }

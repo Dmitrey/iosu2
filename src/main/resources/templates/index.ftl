@@ -11,6 +11,8 @@
 <h2 class="text-light bg-dark">Welcom to rise fields!!</h2>
 <form>
     <a href="/showAllEmp" >Show all employee</a>
+    <a href="/showAllServ">Show all services</a>
+
 </form>
 </body>
 </html>
