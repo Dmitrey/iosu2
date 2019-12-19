@@ -12,7 +12,7 @@
 <form>
     <a href="/showAllEmp" >Show all employee</a>
     <a href="/showAllServ">Show all services</a>
-
+    <a href="/showAllCus">Show all customers</a>
 </form>
 </body>
 </html>

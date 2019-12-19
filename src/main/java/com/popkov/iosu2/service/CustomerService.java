@@ -3,10 +3,12 @@ package com.popkov.iosu2.service;
 import com.popkov.iosu2.entity.Customers;
 import com.popkov.iosu2.repository.CustomersRep;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+@Service
+public class CustomerService {
 
-public class CustomersService {
     @Autowired
     CustomersRep customersRep;
 
