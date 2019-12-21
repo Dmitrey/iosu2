@@ -13,6 +13,7 @@
     <a href="/showAllEmp" >Show all employee</a>
     <a href="/showAllServ">Show all services</a>
     <a href="/showAllCus">Show all customers</a>
+    <a href="/showAllOrders">Show all orders</a>
 </form>
 </body>
 </html>

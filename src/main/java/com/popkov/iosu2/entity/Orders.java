@@ -1,6 +1,7 @@
 package com.popkov.iosu2.entity;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 public class Orders {
@@ -14,14 +15,14 @@ public class Orders {
     @ManyToOne
     private Staff staffID;
     private boolean permission;
-    private String date;
+    private Date date;
     private String vidName;
     private double vidLength;
 
     public Orders() {
     }
 
-    public Orders(Customers customers, Services serviceID, Staff staffID, boolean permission, String date, String vidName, double vidLength) {
+    public Orders(Customers customers, Services serviceID, Staff staffID, boolean permission, Date date, String vidName, double vidLength) {
         this.customers = customers;
         this.serviceID = serviceID;
         this.staffID = staffID;
@@ -63,7 +64,7 @@ public class Orders {
         this.staffID = staffID;
     }
 
-    public boolean isPermission() {
+    public boolean getPermission() {
         return permission;
     }
 
@@ -71,11 +72,12 @@ public class Orders {
         this.permission = permission;
     }
 
-    public String getDate() {
+
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
