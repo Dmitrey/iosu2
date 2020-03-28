@@ -1,6 +1,7 @@
 package com.popkov.iosu2.entity;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Customers {
@@ -15,6 +16,9 @@ public class Customers {
     private String phone;
     @Column
     private String city;
+
+    @OneToMany
+    private Set<Orders> ordersSet;
 
     public Customers() {
     }
@@ -64,5 +68,13 @@ public class Customers {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public Set<Orders> getOrdersSet() {
+        return ordersSet;
+    }
+
+    public void setOrdersSet(Set<Orders> ordersSet) {
+        this.ordersSet = ordersSet;
     }
 }

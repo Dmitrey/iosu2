@@ -8,24 +8,27 @@ public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int orderID;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "customerid")
     private Customers customers;
-    @ManyToOne
-    private Services serviceID;
-    @ManyToOne
-    private Staff staffID;
-    private boolean permission;
-    private Date date;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "serviceid")
+    private Services service;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "id_staff")
+    private Staff staff;
+    private String permission;//todo сделать обратно тип bool
+    private String date;
     private String vidName;
     private double vidLength;
 
     public Orders() {
     }
 
-    public Orders(Customers customers, Services serviceID, Staff staffID, boolean permission, Date date, String vidName, double vidLength) {
+    public Orders(Customers customers, Services serviceID, Staff staffID, String permission, String date, String vidName, double vidLength) {
         this.customers = customers;
-        this.serviceID = serviceID;
-        this.staffID = staffID;
+        this.service = serviceID;
+        this.staff = staffID;
         this.permission = permission;
         this.date = date;
         this.vidName = vidName;
@@ -48,36 +51,36 @@ public class Orders {
         this.customers = customers;
     }
 
-    public Services getServiceID() {
-        return serviceID;
+    public Services getService() {
+        return service;
     }
 
-    public void setServiceID(Services serviceID) {
-        this.serviceID = serviceID;
+    public void setService(Services serviceID) {
+        this.service = serviceID;
     }
 
-    public Staff getStaffID() {
-        return staffID;
+    public Staff getStaff() {
+        return staff;
     }
 
-    public void setStaffID(Staff staffID) {
-        this.staffID = staffID;
+    public void setStaff(Staff staffID) {
+        this.staff = staffID;
     }
 
-    public boolean getPermission() {
+    public String getPermission() {
         return permission;
     }
 
-    public void setPermission(boolean permission) {
+    public void setPermission(String permission) {
         this.permission = permission;
     }
 
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

@@ -38,8 +38,8 @@
                 <tr>
                     <td>${orlist.orderID}</td>
                     <td>${orlist.customers}</td>
-                    <td>${orlist.serviceID}</td>
-                    <td>${orlist.staffID}</td>
+                    <td>${orlist.service}</td>
+                    <td>${orlist.staff}</td>
                     <td>${orlist.permission}</td>
                     <td>${orlist.date}</td>
                     <td>${orlist.vidName}</td>

@@ -1,6 +1,7 @@
 package com.popkov.iosu2.entity;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Services {
@@ -11,6 +12,8 @@ public class Services {
     private String serviceName;
     @Column
     private double price;
+    @OneToMany
+    private Set<Orders> ordersSet;
 
     public Services() {
     }
@@ -42,5 +45,13 @@ public class Services {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public Set<Orders> getOrdersSet() {
+        return ordersSet;
+    }
+
+    public void setOrdersSet(Set<Orders> ordersSet) {
+        this.ordersSet = ordersSet;
     }
 }

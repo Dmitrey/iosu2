@@ -33,7 +33,7 @@ public class OrderController {
 
     @PostMapping("/addOrder")
     public String addOrderSubmit(@ModelAttribute(name = "norder") Orders orders){
-        ordersService.addOrder(orders.getCustomers(),orders.getServiceID(),orders.getStaffID(),orders.getPermission(),
+        ordersService.addOrder(orders.getCustomers(),orders.getService(),orders.getStaff(),orders.getPermission(),
                 orders.getDate(),orders.getVidName(),orders.getVidLength());
         return "redirect:/showAllOrders";
     }

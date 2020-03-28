@@ -1,6 +1,7 @@
 package com.popkov.iosu2.entity;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Staff {
@@ -11,6 +12,9 @@ public class Staff {
     private String name;
     @Column
     private String phone;
+
+    @OneToMany
+    private Set<Orders> ordersSet;
 
     public Staff() {
     }
@@ -42,6 +46,14 @@ public class Staff {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public Set<Orders> getOrdersSet() {
+        return ordersSet;
+    }
+
+    public void setOrdersSet(Set<Orders> ordersSet) {
+        this.ordersSet = ordersSet;
     }
 
     @Override

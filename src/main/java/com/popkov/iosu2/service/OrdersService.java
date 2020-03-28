@@ -18,7 +18,7 @@ public class OrdersService {
     OrdersRep ordersRep;
 
     public void addOrder(Customers customers, Services serviceID, Staff staffID,
-                         boolean permission, Date date, String vidName, double vidLength){
+                         String permission, String date, String vidName, double vidLength){
         ordersRep.save(new Orders(customers,serviceID,staffID,permission,date,vidName,vidLength));
     }
 

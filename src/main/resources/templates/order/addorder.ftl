@@ -15,12 +15,12 @@
     <legend>Add order</legend>
     <form name="norder" action="" method="POST">
         Customer Id: <@spring.formInput "norder.customers" "" "text"/>    <br/>
-        Service Id: <@spring.formInput "norder.type" "" "text"/>    <br/>
-        Staff Id: <@spring.formInput "norder.phone" "" "text"/>    <br/>
-        Permission: <@spring.formInput "norder.city" "" "text"/>    <br/>
-        Date: <@spring.formInput "norder.city" "" "text"/>    <br/>
-        Video name: <@spring.formInput "norder.city" "" "text"/>    <br/>
-        Viedo length: <@spring.formInput "norder.city" "" "text"/>    <br/>
+        Service Id: <@spring.formInput "norder.service" "" "text"/>    <br/>
+        Staff Id: <@spring.formInput "norder.staff" "" "text"/>    <br/>
+        Permission: <@spring.formInput "norder.permission" "" "text"/>    <br/>
+        Date: <@spring.formInput "norder.date" "" "text"/>    <br/>
+        Video name: <@spring.formInput "norder.vidName" "" "text"/>    <br/>
+        Viedo length: <@spring.formInput "norder.vidLength" "" "text"/>    <br/>
         <input type="submit" value="Create" />
     </form>
 </fieldset>
