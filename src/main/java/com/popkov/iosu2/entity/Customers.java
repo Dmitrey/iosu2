@@ -77,4 +77,16 @@ public class Customers {
     public void setOrdersSet(Set<Orders> ordersSet) {
         this.ordersSet = ordersSet;
     }
+
+    @Override
+    public String toString() {
+        return "Customers{" +
+                "customerID=" + customerID +
+                ", name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", phone='" + phone + '\'' +
+                ", city='" + city + '\'' +
+                ", ordersSet=" + ordersSet +
+                '}';
+    }
 }

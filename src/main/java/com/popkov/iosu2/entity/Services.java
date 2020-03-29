@@ -54,4 +54,14 @@ public class Services {
     public void setOrdersSet(Set<Orders> ordersSet) {
         this.ordersSet = ordersSet;
     }
+
+    @Override
+    public String toString() {
+        return "Services{" +
+                "serviceID=" + serviceID +
+                ", serviceName='" + serviceName + '\'' +
+                ", price=" + price +
+                ", ordersSet=" + ordersSet +
+                '}';
+    }
 }

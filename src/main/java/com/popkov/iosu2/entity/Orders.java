@@ -99,4 +99,18 @@ public class Orders {
     public void setVidLength(double vidLength) {
         this.vidLength = vidLength;
     }
+
+    @Override
+    public String toString() {
+        return "Orders{" +
+                "orderID=" + orderID +
+                ", customers=" + customers +
+                ", service=" + service +
+                ", staff=" + staff +
+                ", permission='" + permission + '\'' +
+                ", date='" + date + '\'' +
+                ", vidName='" + vidName + '\'' +
+                ", vidLength=" + vidLength +
+                '}';
+    }
 }
